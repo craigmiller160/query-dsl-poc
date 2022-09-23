@@ -1,4 +1,4 @@
-package io.craigmiller160.querydsl.kotlin
+package io.craigmiller160.querydslpoc.kotlin
 
 import io.craigmiller160.querydslpoc.kotlin.data.repository.EmployeeRepository
 import org.assertj.core.api.Assertions.assertThat
