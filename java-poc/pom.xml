@@ -99,30 +99,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>com.rudikershaw.gitbuildhook</groupId>
-                <artifactId>git-build-hook-maven-plugin</artifactId>
-                <version>${git.hook.plugin.version}</version>
-                <configuration>
-                    <installHooks>
-                        <pre-commit>spotless-apply</pre-commit>
-                    </installHooks>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>install</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>io.craigmiller160</groupId>
-                        <artifactId>maven-git-hooks</artifactId>
-                        <version>${maven.git.hooks.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
         </plugins>
     </build>
 
