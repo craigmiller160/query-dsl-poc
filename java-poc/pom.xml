@@ -23,9 +23,15 @@
         <spotless.version>2.26.0</spotless.version>
         <faker.version>1.0.2</faker.version>
         <mapstruct.version>1.5.2.Final</mapstruct.version>
+        <querydsl.version>5.0.0</querydsl.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.querydsl</groupId>
+            <artifactId>querydsl-jpa</artifactId>
+            <version>${querydsl.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
