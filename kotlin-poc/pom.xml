@@ -35,9 +35,15 @@
         <mapstruct.version>1.5.2.Final</mapstruct.version>
         <spotless.version>2.26.0</spotless.version>
         <faker.version>1.0.2</faker.version>
+        <mapstruct.version>1.5.2.Final</mapstruct.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
