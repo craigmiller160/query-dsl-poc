@@ -4,13 +4,14 @@ This is a POC to figure out how to properly setup QueryDSL in both Java & Kotlin
 
 ## Objectives
 
-1. [ ] Java
+1. [x] Setup docker Postgres
+2. [ ] Java
    1. [ ] Scaffold Spring Boot Project
    2. [ ] Setup basic JPA entities & SQL scripts
    3. [ ] Add validation for Lombok code generation
    4. [ ] Integrate MapStruct and add validation for code generation
    5. [ ] Integrate QueryDSL and add validation for code generation
-2. [ ] Kotlin
+3. [ ] Kotlin
    1. [ ] Scaffold Spring Boot Project
    2. [ ] Setup basic JPA Entities & SQL scripts
    3. [ ] Integrate MapStruct and add validation for code generation
