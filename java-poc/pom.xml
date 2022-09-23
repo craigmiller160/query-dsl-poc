@@ -74,7 +74,8 @@
                         <includes>
                             <include>src/main/resources/db/migration/*.sql</include>
                         </includes>
-                        <dbeaver />
+<!--                        <dbeaver />-->
+                        <prettier />
                     </sql>
                 </configuration>
                 <executions>
