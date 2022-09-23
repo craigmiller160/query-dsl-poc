@@ -24,6 +24,7 @@
         <faker.version>1.0.2</faker.version>
         <mapstruct.version>1.5.2.Final</mapstruct.version>
         <querydsl.version>5.0.0</querydsl.version>
+        <jakarta.persistence.version>2.2.3</jakarta.persistence.version>
     </properties>
 
     <dependencies>
@@ -89,10 +90,11 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-<!--                    <annotationProcessors>-->
-<!--                        <annotationProcessor>lombok.launch.AnnotationProcessorHider$AnnotationProcessor</annotationProcessor>-->
-<!--                        <annotationProcessor>org.mapstruct.ap.MappingProcessor</annotationProcessor>-->
-<!--                    </annotationProcessors>-->
+                    <annotationProcessors>
+                        <annotationProcessor>lombok.launch.AnnotationProcessorHider$AnnotationProcessor</annotationProcessor>
+                        <annotationProcessor>org.mapstruct.ap.MappingProcessor</annotationProcessor>
+                        <annotationProcessor>com.querydsl.apt.jpa.JPAAnnotationProcessor</annotationProcessor>
+                    </annotationProcessors>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>com.querydsl</groupId>
@@ -108,6 +110,11 @@
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
                             <version>${mapstruct.version}</version>
+                        </path>
+                        <path>
+                            <groupId>jakarta.persistence</groupId>
+                            <artifactId>jakarta.persistence-api</artifactId>
+                            <version>${jakarta.persistence.version}</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
