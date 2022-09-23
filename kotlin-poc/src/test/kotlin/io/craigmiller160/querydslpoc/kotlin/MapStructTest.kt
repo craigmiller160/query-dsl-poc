@@ -2,6 +2,7 @@ package io.craigmiller160.querydslpoc.kotlin
 
 import io.craigmiller160.querydslpoc.kotlin.data.mapper.PositionMapper
 import io.craigmiller160.querydslpoc.kotlin.data.repository.PositionRepository
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -16,6 +17,10 @@ class MapStructTest @Autowired constructor(
 ) {
     @Test
     fun `map struct mapper`() {
-        TODO()
+        val position = positionRepository.findAll().first()
+        val positionDto = positionMapper.positionToDTO(position)
+        assertThat(positionDto)
+            .hasFieldOrPropertyWithValue("id", position.id)
+            .hasFieldOrPropertyWithValue("name", position.name);
     }
 }
