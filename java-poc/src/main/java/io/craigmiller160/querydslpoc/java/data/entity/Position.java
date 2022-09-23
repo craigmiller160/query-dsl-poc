@@ -1,4 +1,4 @@
-package io.craigmiller160.querydslpoc.java.data;
+package io.craigmiller160.querydslpoc.java.data.entity;
 
 import lombok.Data;
 
