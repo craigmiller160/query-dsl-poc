@@ -9,7 +9,7 @@ This is a POC to figure out how to properly setup QueryDSL in both Java & Kotlin
    1. [x] Scaffold Spring Boot Project
    2. [x] Setup basic JPA entities & SQL scripts
    3. [x] Add validation for Lombok code generation
-   4. [ ] Integrate MapStruct and add validation for code generation
+   4. [x] Integrate MapStruct and add validation for code generation
    5. [ ] Integrate QueryDSL and add validation for code generation
 3. [ ] Kotlin POC
    1. [x] Scaffold Spring Boot Project
