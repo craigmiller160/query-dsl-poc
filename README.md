@@ -22,6 +22,8 @@ This is a POC to figure out how to properly setup QueryDSL in both Java & Kotlin
 IntelliJ's default builder cannot properly invoke Kapt for annotation processing in Kotlin. To make this work, IntelliJ must delegate all build tasks to Maven. To do this, open the settings menu and go to `Build, Execution, Deployment -> Build Tools -> Maven -> Runner`. Then do the following.
 
 1. Check the box that says "Delete IDE build/run actions to Maven"
-2. Check the box that says "Skip tests" (or else failing tests will prevent all builds)
+2. Make sure that "Skip Tests" is not checked.
+3. Add the property `maven.test.skip.exec` with the value of `true`. This will ensure that tests compile, but are not executed as part of the build.
+4. If Spotless is used, add the property `spotless.check.skip` with the value of `true` to ensure that spotless formatting errors do not block a build.
 
 As an additional option, you can install the `Maven Helper` plugin, and then in its settings check "Use a terminal to run goals, with a custom mvn command" and make sure it is set to "mvnd". This just gives a nice little speed boost.
