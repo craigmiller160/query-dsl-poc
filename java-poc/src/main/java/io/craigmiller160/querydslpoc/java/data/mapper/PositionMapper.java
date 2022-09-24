@@ -6,5 +6,5 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface PositionMapper {
-    PositionDTO positionToDTO(final Position position);
+  PositionDTO positionToDTO(final Position position);
 }

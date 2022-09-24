@@ -11,15 +11,13 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @SpringBootTest
 @ExtendWith(SpringExtension::class)
-class JpaTest @Autowired constructor(
-    private val employeeRepository: EmployeeRepository
-) {
-    @Test
-    fun `get employees`() {
-        val page = PageRequest.of(0, 1)
-        val employees = employeeRepository.findAll(page)
-        assertThat(employees.content).hasSize(1)
-        val employee = employees.content.first()
-        assertThat(employee.firstName.length).isGreaterThan(0)
-    }
+class JpaTest @Autowired constructor(private val employeeRepository: EmployeeRepository) {
+  @Test
+  fun `get employees`() {
+    val page = PageRequest.of(0, 1)
+    val employees = employeeRepository.findAll(page)
+    assertThat(employees.content).hasSize(1)
+    val employee = employees.content.first()
+    assertThat(employee.firstName.length).isGreaterThan(0)
+  }
 }

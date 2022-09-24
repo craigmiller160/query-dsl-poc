@@ -11,16 +11,18 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @SpringBootTest
 @ExtendWith(SpringExtension::class)
-class MapStructTest @Autowired constructor(
-    private val positionRepository: PositionRepository,
-    private val positionMapper: PositionMapper
+class MapStructTest
+@Autowired
+constructor(
+  private val positionRepository: PositionRepository,
+  private val positionMapper: PositionMapper
 ) {
-    @Test
-    fun `map struct mapper`() {
-        val position = positionRepository.findAll().first()
-        val positionDto = positionMapper.positionToDTO(position)
-        assertThat(positionDto)
-            .hasFieldOrPropertyWithValue("id", position.id)
-            .hasFieldOrPropertyWithValue("name", position.name);
-    }
+  @Test
+  fun `map struct mapper`() {
+    val position = positionRepository.findAll().first()
+    val positionDto = positionMapper.positionToDTO(position)
+    assertThat(positionDto)
+      .hasFieldOrPropertyWithValue("id", position.id)
+      .hasFieldOrPropertyWithValue("name", position.name)
+  }
 }

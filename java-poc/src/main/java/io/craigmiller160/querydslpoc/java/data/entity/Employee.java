@@ -1,12 +1,11 @@
 package io.craigmiller160.querydslpoc.java.data.entity;
 
-import lombok.Data;
-
+import java.time.LocalDate;
+import java.util.UUID;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.time.LocalDate;
-import java.util.UUID;
+import lombok.Data;
 
 @Data
 @Entity

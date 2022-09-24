@@ -6,5 +6,5 @@ import org.mapstruct.Mapper
 
 @Mapper(componentModel = "spring")
 interface PositionMapper {
-    fun positionToDTO(position: Position): PositionDTO
+  fun positionToDTO(position: Position): PositionDTO
 }

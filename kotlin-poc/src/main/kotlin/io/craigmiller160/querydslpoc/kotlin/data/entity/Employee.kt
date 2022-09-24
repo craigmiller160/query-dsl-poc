@@ -9,10 +9,9 @@ import javax.persistence.Table
 @Entity
 @Table(name = "employees")
 class Employee {
-    @Id
-    lateinit var id: UUID
-    lateinit var firstName: String
-    lateinit var lastName: String
-    lateinit var dateOfBirth: LocalDate
-    lateinit var positionId: UUID
+  @Id lateinit var id: UUID
+  lateinit var firstName: String
+  lateinit var lastName: String
+  lateinit var dateOfBirth: LocalDate
+  lateinit var positionId: UUID
 }
