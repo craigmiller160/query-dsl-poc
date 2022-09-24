@@ -10,12 +10,10 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @SpringBootTest
 @ExtendWith(SpringExtension::class)
-class QueryDSLTest @Autowired constructor(
-    private val queryDSLService: QueryDSLService
-) {
-    @Test
-    fun `query dsl operation`() {
-        val result = queryDSLService.getOneEmployee()
-        assertNotNull(result)
-    }
+class QueryDSLTest @Autowired constructor(private val queryDSLService: QueryDSLService) {
+  @Test
+  fun `query dsl operation`() {
+    val result = queryDSLService.getOneEmployee()
+    assertNotNull(result)
+  }
 }
