@@ -14,5 +14,14 @@ This is a POC to figure out how to properly setup QueryDSL in both Java & Kotlin
 3. [ ] Kotlin POC
    1. [x] Scaffold Spring Boot Project
    2. [x] Setup basic JPA Entities. SQL scripts come from Java POC project
-   3. [ ] Integrate MapStruct and add validation for code generation
+   3. [x] Integrate MapStruct and add validation for code generation
    4. [ ] Integrate QueryDSL and add validation for code generation
+
+## Important Information For Kotlin Build
+
+IntelliJ's default builder cannot properly invoke Kapt for annotation processing in Kotlin. To make this work, IntelliJ must delegate all build tasks to Maven. To do this, open the settings menu and go to `Build, Execution, Deployment -> Build Tools -> Maven -> Runner`. Then do the following.
+
+1. Check the box that says "Delete IDE build/run actions to Maven"
+2. Check the box that says "Skip tests" (or else failing tests will prevent all builds)
+
+As an additional option, you can install the `Maven Helper` plugin, and then in its settings check "Use a terminal to run goals, with a custom mvn command" and make sure it is set to "mvnd". This just gives a nice little speed boost.
