@@ -40,6 +40,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.querydsl</groupId>
+            <artifactId>querydsl-jpa</artifactId>
+            <version>${querydsl.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>${mapstruct.version}</version>
@@ -104,8 +109,14 @@
                             </sourceDirs>
                             <annotationProcessors>
                                 <annotationProcessor>org.mapstruct.ap.MappingProcessor</annotationProcessor>
+                                <annotationProcessor>com.querydsl.apt.jpa.JPAAnnotationProcessor</annotationProcessor>
                             </annotationProcessors>
                             <annotationProcessorPaths>
+                                <annotationProcessorPath>
+                                    <groupId>com.querydsl</groupId>
+                                    <artifactId>querydsl-apt</artifactId>
+                                    <version>${querydsl.version}</version>
+                                </annotationProcessorPath>
                                 <annotationProcessorPath>
                                     <groupId>org.mapstruct</groupId>
                                     <artifactId>mapstruct-processor</artifactId>
